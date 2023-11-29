@@ -27,9 +27,25 @@ function Registry() {
 //---- START Search filter stuff----//
 const [search,setSearch] = useState('')
 
-const filteredPlanets = planets.filter((planet) => {
-    return planet.name.toLowerCase().includes(search.toLocaleLowerCase())
-})
+    const filteredPlanets = planets.filter((curPlanet) => {
+        //if currentPlant contains substring of search
+        curPlanet.name.toLowerCase().includes(search.toLocaleLowerCase())
+
+        // return true
+    //else
+        //return false
+    // return planet.name.toLowerCase().includes(search.toLocaleLowerCase())
+
+    //another way to do it
+    // let curPlanetName = curPlanet.name.toLowerCase()
+    // let substringSearch = search.toLocaleLowerCase()
+    // if(curPlanetName.includes(substringSearch))
+    //yet ANOTHER way to do it
+    // (planet.name.toUpperCase().includes(searchString.toUpperCase())
+    //             || planet.climate.toUpperCase().includes(searchString.toUpperCase())
+    //             || planet.terrain.toUpperCase().includes(searchString.toUpperCase())
+    //             || planet.population.toUpperCase().includes(searchString.toUpperCase()))
+        })
 //END  Search stuff//
 
     return(
